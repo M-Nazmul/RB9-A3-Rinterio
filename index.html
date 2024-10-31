@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rinterio</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Daisy Ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- Tailwind css cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css -->
+    <style>
+      body{
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
     <script>
         tailwind.config = {
           theme: {
             extend: {
               colors: {
-                clifford: '#da373d',
+                clifford: "#da373d",
+                'bg-header': '#F8F8F8',
               }
             }
           }
@@ -20,7 +32,90 @@
       </script>
 </head>
 <body>
+  <!-- Header -->
+  <header class="max-w-[1440px] mx-auto pt-10 md:pt-12 xl:pt-14 bg-bg-header">
     <!-- Nav -->
-    
+    <nav>
+      <div class="navbar  justify-between">
+        <div class="">
+          <a class="btn btn-ghost text-xl">
+            <img src="./assets/arrow-up-right-01.svg" class="h-8" alt="logo" />
+                      <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">
+                        Interior
+                      </span>
+          </a>
+        </div>  
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+              <li><a>Services</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>Contact Us</a></li>
+          </ul>
+        </div>    
+        <div>
+          <div class=" flex-shrink-0 gap-2 hidden sm:block">
+            <!-- <a class="btn">Button</a>
+            <a class="btn">Button</a> -->
+            <div class="flex gap-3">
+              <div class="flex  gap-7 pl-8 md:pl-0">
+                  <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>                  
+                  </button>
+                  <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                      </svg>
+                  </button>
+              </div>
+              <button type="button" class="flex gap-2 items-center justify-center text-black bg-[#ABEF5F]  focus:ring-4 focus:outline-none focus:ring-[#ABEF5F] focus:ring-offset-2 hover:bg-transparent  border hover:border-[#ABEF5F] transition rounded-full  px-5 py-3 text-center font-extrabold text-xl group">Book Consult <span class="group-hover:-translate-y-1 group-hover:translate-x-1 transition duration-150 ease-in-out"><img src="./assets/arrow-up-right-black.svg" alt=""></span></button>
+            </div>
+          </div>
+          <div class="dropdown relative">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow absolute right-2">
+              <li><a>Home</a></li>
+              <li><a>Services</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>Contact Us</a></li>
+              <div class="flex flex-col gap-3 sm:hidden">
+                <div class="flex  gap-7 pl-8 md:pl-0">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                          </svg>                  
+                    </button>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>
+                    </button>
+                </div>
+                <button type="button" class="flex gap-2 items-center justify-center text-black bg-[#ABEF5F]  focus:ring-4 focus:outline-none focus:ring-[#ABEF5F] focus:ring-offset-2 hover:bg-transparent  border hover:border-[#ABEF5F] transition rounded-full  px-1 py-2 text-center font-semibold text-[16px] group">Book Consult <span class="group-hover:-translate-y-1 group-hover:translate-x-1 transition duration-150 ease-in-out"><img src="./assets/arrow-up-right-black.svg" alt=""></span></button>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </header>
 </body>
 </html>
